@@ -1,15 +1,22 @@
 "use strict";
 
 const express = require("express");
+const hbs = require("express-hbs");
 
 const port = 8001;
 const applicationName = "vamp(ire)!";
 const serverStartMessage = `${applicationName} running on port ${port}`;
 
-const staticFilePath = __dirname + "/client";
-
 const app = express();
-app.use("/", express.static(staticFilePath));
+
+app.get('/', function(req, res) {
+    res.render('home');
+});
+
+app.engine('hbs', hbs.express4());
+
+app.set('view engine', 'hbs');
+app.set('views', __dirname + '/views');
 
 const server = app.listen(port, function() {
     console.log(serverStartMessage);
