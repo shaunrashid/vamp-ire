@@ -8,6 +8,9 @@
         "type": "git",
         "url": "https://github.com/shaunrashid/vamp-ire"
     },
+    "scripts": {
+        "start": "node index.js"
+    },
     "dependencies": {
         "express": "^4.0.0",
         "express-hbs": "^2.1.0",
