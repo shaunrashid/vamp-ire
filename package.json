@@ -1,0 +1,16 @@
+{
+    "name": "vamp-ire",
+    "version": "0.0.0",
+    "author": "Shaun Rashid",
+    "description": "A simple vampire fighting game built to demonstrate basic front-end development techniques using HTML, CSS, and Javascript on a Node server.",
+    "license": "MIT",
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/shaunrashid/vamp-ire"
+    },
+    "dependencies": {
+        "express": "^4.0.0",
+        "express-hbs": "^2.1.0",
+        "express-session": "^1.6.0"
+    }
+}
