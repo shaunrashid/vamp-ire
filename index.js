@@ -13,6 +13,14 @@ app.get('/', function(req, res) {
     res.render('home');
 });
 
+app.post('/fight', function(req, res) {
+    res.render('fight');
+});
+
+app.post('/gameover', function(req, res) {
+    res.render('gameover');
+});
+
 app.engine('hbs', hbs.express4());
 
 app.set('view engine', 'hbs');

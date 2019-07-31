@@ -7,13 +7,14 @@
         <meta name="description" content="A simple vampire fighting game built to demonstrate basic front-end development techniques using HTML, CSS, and Javascript on a Node server." />
     </head>
 
-    <body class="start-game">
+    <body class="in-progress">
         <h1>vamp(ire)!</h1>
-        <p>Carmilla! The sinister vampire, <a href="https://en.wikipedia.org/wiki/Lord_Ruthven_(vampire)" target="_blank">Ruthven</a> is trying to invade your home! Fend off this dastardly foe!</p>
-
-        <form name="start-game" method="post" action="/fight">
+        <p>The battle continues!</p>
+        
+        <form name="start-game" method="post" action="/gameover">
             <label class="vampire carmilla">
                 <span>Carmilla</span>
+                <progress id="carmilla-health" max="100" value="90"><span>Health: 90%</span></progress>
                 <aside>
                     <p>A creature of unearthly beauty, Carmilla is the alter-ego of Mircalla, Countess Karnstein: the original female vampire.</p>
                 </aside>
@@ -21,12 +22,13 @@
 
             <label class="vampire ruthven">
                 <span>Ruthven</span>
+                <progress id="ruthven-health" max="100" value="74"><span>Health: 74%</span></progress>
                 <aside>
                     <p>A man of mysterious origins, Ruthven takes on the guise of a suave, British nobelman to hide his true nature as a vampire.</p>
                 </aside>
             </label>
 
-            <button type="submit">Fight!</button>
+            <button type="submit">Fight again!</button>
         </form>
     </body>
 </html>
